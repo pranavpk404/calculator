@@ -11,6 +11,7 @@
   <body>
 
     <div class="container" align="center">
+         
       <form name="forms">
         <input id="display-box" type="text" item name="screen" />
         <div class="calculator">
@@ -35,14 +36,14 @@
           <input class="button" type="button" value=" ÷ " onclick="forms.screen.value+='/'" />
           <input class="button" type="button" value=" × " onclick="forms.screen.value+='*'" />
           <br>
-          <input id="reset" class="button" type="button" value=" AC " onclick="forms.screen.value =''" />
-
+          
           <input class="button"
-            type="button"
-            id="equal"
-            value=" = "
-            onclick="forms.screen.value = eval(forms.screen.value)"
+          type="button"
+          id="equal"
+          value=" = "
+          onclick="forms.screen.value = eval(forms.screen.value)"
           />
+          <input id="reset" class="button" type="button" value=" AC " onclick="forms.screen.value =''" />
         </div>
 
         
