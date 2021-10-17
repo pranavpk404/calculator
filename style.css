@@ -1,0 +1,64 @@
+:root {
+  --background-color: hsl(222, 26%, 31%);
+  --display-color: hsl(224, 36%, 15%);
+  --toggle-background: hsl(223, 31%, 20%);
+  --display-text: white;
+  --key-color: hsl(221, 14%, 31%);
+  --key-background: hsl(30, 25%, 89%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --reset-key-bg: hsl(6, 63%, 50%);
+  --reset-key-shadow: hsl(6, 70%, 34%);
+  --equal-key: hsl(30, 25%, 89%);
+  --equal-key-shadow: hsl(28, 16%, 65%);
+}
+body {
+  background-color: var(--background-color);
+}
+
+.container {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#display-box {
+  border: none;
+  width: 300px;
+  background-color: var(--display-color);
+  color: var(--display-text);
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 13px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.calculator {
+  background-color: var(--display-color);
+  border-radius: 5px;
+}
+
+.button {
+  font-size: 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  color: var(--key-color);
+  background: var(--key-background);
+  font-weight: bold;
+  height: 40px;
+  width: 65px;
+}
+
+#reset {
+  color: white;
+  background-color: var(--reset-key-bg);
+  box-shadow: 0 3px 1px 0px var(--reset-key-shadow);
+  width: 145px;
+}
+#equal {
+  background-color: var(--background-color);
+  width: 145px;
+  color: white;
+}
