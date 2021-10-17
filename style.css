@@ -139,7 +139,7 @@ body {
 }
 
 #btn {
-  background-color: var(--keys-bg);
+  background-color: var(--main-bg);
   color: var(--keys-color);
   border: none;
   font-size: 18px;
