@@ -106,8 +106,8 @@ body {
 }
 .dropdown-content {
   display: none;
-  background-color: var(--keys-color);
-  color: var(--reset-background-toggle);
+  background-color: var(--keys-bg);
+  color: var(--keys-color);
   position: absolute;
   z-index: 1;
   min-width: 160px;
