@@ -1,0 +1,159 @@
+.theme-dark {
+  --main-bg: hsl(222, 26%, 31%); /*equal, body*/
+  --toggle-bg-keypad-bg: hsl(223, 31%, 20%); /*calculator bg*/
+  --screen-bg: hsl(224, 36%, 15%); /*display bg*/
+  /* Keys */
+  --keys-bg: hsl(30, 25%, 89%); /*Button bg*/
+  --keys-color: hsl(221, 14%, 50%); /*Button color*/
+  --key-shadow: hsl(28, 16%, 65%);
+
+  --reset-background-toggle: hsl(6, 63%, 50%); /*Reset BG*/
+  --key-shadow-reset: hsl(6, 70%, 34%);
+  --key-shadow-equal: hsl(224, 28%, 35%);
+  /* text */
+  --display-text-color: hsl(0, 0%, 100%);
+}
+.theme-light {
+  --main-bg: hsl(0, 0%, 90%); /*equal, body*/
+  --toggle-bg-keypad-bg: hsl(0, 5%, 81%); /*calculator bg*/
+  --screen-bg: hsl(0, 5%, 75%); /*display bg*/
+  /* Keys */
+  --keys-bg: hsl(30, 25%, 89%); /*Button bg*/
+  --keys-color: hsl(185, 58%, 25%); /*Button color*/
+  --key-shadow: hsl(25, 99%, 27%);
+
+  --reset-background-toggle: hsl(25, 98%, 40%); /*Reset BG*/
+  --key-shadow-reset: hsl(45, 7%, 89%);
+  --key-shadow-equal: hsl(35, 11%, 61%);
+  /* text */
+  --display-text-color: hsl(60, 10%, 19%);
+}
+.theme-contrast {
+  --main-bg: hsl(268, 75%, 9%); /*equal, body*/
+  --toggle-bg-keypad-bg: hsl(269, 74%, 12%); /*calculator bg*/
+  --screen-bg: hsl(269, 74%, 12%); /*display bg*/
+  /* Keys */
+  --keys-bg: hsl(269, 48%, 20%); /*Button bg*/
+  --keys-color: hsl(50, 97%, 62%); /*Button color*/
+  --key-shadow: hsl(281, 89%, 26%);
+
+  --reset-background-toggle: hsl(176, 100%, 44%); /*Reset BG*/
+  --key-shadow-reset: hsl(176, 50%, 44%);
+  --key-shadow-equal: hsl(50, 50%, 50%);
+  /* text */
+  --display-text-color: hsl(50, 97%, 62%);
+}
+body {
+  background-color: var(--main-bg);
+}
+
+.container {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#display-box {
+  border: none;
+  font-family: "Spartan", sans-serif;
+  width: 300px;
+  background-color: var(--screen-bg);
+  color: var(--display-text-color);
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 13px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.calculator {
+  background-color: var(--toggle-bg-keypad-bg);
+  border-radius: 5px;
+}
+
+.button {
+  font-size: 20px;
+  font-family: "Spartan", sans-serif;
+  margin: 6px;
+  border: none;
+  border-radius: 6px;
+  color: var(--keys-color);
+  background: var(--keys-bg);
+  font-weight: bold;
+  height: 40px;
+  width: 65px;
+  box-shadow: 0 5px 1px 0px var(--key-shadow);
+}
+
+#reset {
+  color: white;
+  background-color: var(--reset-background-toggle);
+  box-shadow: 0 3px 1px 0px var(--key-shadow-reset);
+  width: 145px;
+}
+#equal {
+  box-shadow: 0 3px 1px 0px var(--key-shadow-equal);
+  background-color: var(--keys-color);
+  width: 145px;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border: none;
+}
+.dropdown-content {
+  display: none;
+  background-color: var(--keys-bg);
+  color: var(--keys-color);
+  position: absolute;
+  z-index: 1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  font-size: 18px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  border: none;
+  border-radius: 5px;
+}
+
+#list {
+  list-style: none;
+}
+
+#btn {
+  background-color: var(--main-bg);
+  color: var(--keys-color);
+  border: none;
+  font-size: 18px;
+}
+@media screen and (max-width: 640px) {
+  .button {
+    width: 60px;
+    height: 55px;
+  }
+
+  #reset {
+    width: 140px;
+  }
+  #equal {
+    width: 140px;
+  }
+}
