@@ -1,5 +1,5 @@
-# calculator
+# Calculator
 
-calculator using html,css,javascript
+Calculator using HTML,CSS,Javascript
 
 design from frontend mentor
