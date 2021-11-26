@@ -1,141 +1,159 @@
-:root {
-  --btn-bg-color: #e96c05;
-  --color: rgb(0, 0, 0);
+.theme-dark {
+  --main-bg: hsl(222, 26%, 31%); /*equal, body*/
+  --toggle-bg-keypad-bg: hsl(223, 31%, 20%); /*calculator bg*/
+  --screen-bg: hsl(224, 36%, 15%); /*display bg*/
+  /* Keys */
+  --keys-bg: hsl(30, 25%, 89%); /*Button bg*/
+  --keys-color: hsl(221, 14%, 50%); /*Button color*/
+  --key-shadow: hsl(28, 16%, 65%);
+
+  --reset-background-toggle: hsl(6, 63%, 50%); /*Reset BG*/
+  --key-shadow-reset: hsl(6, 70%, 34%);
+  --key-shadow-equal: hsl(224, 28%, 35%);
+  /* text */
+  --display-text-color: hsl(0, 0%, 100%);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.theme-light {
+  --main-bg: hsl(0, 0%, 90%); /*equal, body*/
+  --toggle-bg-keypad-bg: hsl(0, 5%, 81%); /*calculator bg*/
+  --screen-bg: hsl(0, 5%, 75%); /*display bg*/
+  /* Keys */
+  --keys-bg: hsl(30, 25%, 89%); /*Button bg*/
+  --keys-color: hsl(185, 58%, 25%); /*Button color*/
+  --key-shadow: hsl(25, 99%, 27%);
+
+  --reset-background-toggle: hsl(25, 98%, 40%); /*Reset BG*/
+  --key-shadow-reset: hsl(45, 7%, 89%);
+  --key-shadow-equal: hsl(35, 11%, 61%);
+  /* text */
+  --display-text-color: hsl(60, 10%, 19%);
 }
-::selection {
-  color: var(--color);
-  background: rgb(0, 0, 0);
-}
-html {
-  background: black;
+.theme-contrast {
+  --main-bg: hsl(268, 75%, 9%); /*equal, body*/
+  --toggle-bg-keypad-bg: hsl(269, 74%, 12%); /*calculator bg*/
+  --screen-bg: hsl(269, 74%, 12%); /*display bg*/
+  /* Keys */
+  --keys-bg: hsl(269, 48%, 20%); /*Button bg*/
+  --keys-color: hsl(50, 97%, 62%); /*Button color*/
+  --key-shadow: hsl(281, 89%, 26%);
+
+  --reset-background-toggle: hsl(176, 100%, 44%); /*Reset BG*/
+  --key-shadow-reset: hsl(176, 50%, 44%);
+  --key-shadow-equal: hsl(50, 50%, 50%);
+  /* text */
+  --display-text-color: hsl(50, 97%, 62%);
 }
 body {
-  color: var(--color);
-  width: 100%;
-  height: 100vh;
-  padding: 10px;
-  background: linear-gradient(50deg, #c04848 0%, #480048 100%);
+  background-color: var(--main-bg);
 }
+
 .container {
-  max-width: 400px;
-  width: 100%;
-  margin: 120px auto;
-  padding: 25px;
-  border-radius: 5px;
-  box-shadow: 1px 0px 15px 20px rgb(0 0 0 / 10%);
-}
-
-.container header {
-  font-size: 30px;
-  font-weight: 600;
-}
-.container .inputField {
-  margin: 20px 0;
-  display: flex;
-  height: 45px;
-}
-.inputField input {
-  width: 85%;
-  height: 100%;
-  outline: none;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  font-size: 17px;
-  padding-left: 15px;
-  transition: all 0.3s ease;
-}
-.inputField input:focus {
-  border-color: var(--btn-bg-color);
-}
-.inputField button {
-  width: 50px;
-  height: 100%;
-  border: none;
-  color: var(--color);
-  margin-left: 5px;
-  font-size: 21px;
-  outline: none;
-  background: var(--btn-bg-color);
-  cursor: pointer;
-  border-radius: 3px;
-  opacity: 0.6;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.inputField button:hover,
-.footer button:hover {
-  background: var(--btn-bg-color);
-}
-.inputField button.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-.container .todoList {
-  max-height: 250px;
-  overflow-y: auto;
-}
-.todoList li {
-  position: relative;
-  list-style: none;
-  margin-bottom: 8px;
-  background: #f2f2f2;
-  border-radius: 3px;
-  padding: 10px 15px;
-  cursor: default;
-  overflow: hidden;
-  word-wrap: break-word;
-}
-.todoList li .icon {
+  left: 50%;
   position: absolute;
-  right: -45px;
   top: 50%;
-  transform: translateY(-50%);
-  background: #e74c3c;
-  width: 45px;
+  transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 0 3px 3px 0;
-  cursor: pointer;
-  transition: all 0.2s ease;
 }
-.todoList li:hover .icon {
-  right: 0px;
-}
-.container .footer {
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: space-between;
-}
-.footer button {
-  padding: 6px 10px;
-  border-radius: 3px;
+#display-box {
   border: none;
-  outline: none;
-  color: #fff;
-  font-weight: 400;
-  font-size: 16px;
-  margin-left: 5px;
-  background: var(--btn-bg-color);
-  cursor: pointer;
-  user-select: none;
-  opacity: 0.6;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.footer button.active {
-  opacity: 1;
-  pointer-events: auto;
+  font-family: "Spartan", sans-serif;
+  width: 300px;
+  background-color: var(--screen-bg);
+  color: var(--display-text-color);
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 13px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
-.footer span {
+.calculator {
+  background-color: var(--toggle-bg-keypad-bg);
+  border-radius: 5px;
+}
+
+.button {
+  font-size: 20px;
+  font-family: "Spartan", sans-serif;
+  margin: 6px;
+  border: none;
+  border-radius: 6px;
+  color: var(--keys-color);
+  background: var(--keys-bg);
   font-weight: bold;
+  height: 40px;
+  width: 65px;
+  box-shadow: 0 5px 1px 0px var(--key-shadow);
+}
+
+#reset {
+  color: white;
+  background-color: var(--reset-background-toggle);
+  box-shadow: 0 3px 1px 0px var(--key-shadow-reset);
+  width: 145px;
+}
+#equal {
+  box-shadow: 0 3px 1px 0px var(--key-shadow-equal);
+  background-color: var(--keys-color);
+  width: 145px;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border: none;
+}
+.dropdown-content {
+  display: none;
+  background-color: var(--keys-bg);
+  color: var(--keys-color);
+  position: absolute;
+  z-index: 1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  font-size: 18px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  border: none;
+  border-radius: 5px;
+}
+
+#list {
+  list-style: none;
+}
+
+#btn {
+  background-color: var(--main-bg);
+  color: var(--keys-color);
+  border: none;
+  font-size: 18px;
+}
+@media screen and (max-width: 640px) {
+  .button {
+    width: 60px;
+    height: 55px;
+  }
+
+  #reset {
+    width: 140px;
+  }
+  #equal {
+    width: 140px;
+  }
 }
