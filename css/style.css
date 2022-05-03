@@ -1,48 +1,42 @@
 .theme-dark {
-  --main-bg: hsl(222, 26%, 31%); /*equal, body*/
-  --toggle-bg-keypad-bg: hsl(223, 31%, 20%); /*calculator bg*/
-  --screen-bg: hsl(224, 36%, 15%); /*display bg*/
-  /* Keys */
-  --keys-bg: hsl(30, 25%, 89%); /*Button bg*/
-  --keys-color: hsl(221, 14%, 50%); /*Button color*/
+  --main-bg: hsl(222, 26%, 31%);
+  --toggle-bg-keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --keys-bg: hsl(30, 25%, 89%);
+  --keys-color: hsl(221, 14%, 50%);
   --key-shadow: hsl(28, 16%, 65%);
-
-  --reset-background-toggle: hsl(6, 63%, 50%); /*Reset BG*/
+  --reset-background-toggle: hsl(6, 63%, 50%);
   --key-shadow-reset: hsl(6, 70%, 34%);
   --key-shadow-equal: hsl(224, 28%, 35%);
-  /* text */
   --display-text-color: hsl(0, 0%, 100%);
 }
-.theme-light {
-  --main-bg: hsl(0, 0%, 90%); /*equal, body*/
-  --toggle-bg-keypad-bg: hsl(0, 5%, 81%); /*calculator bg*/
-  --screen-bg: hsl(0, 5%, 75%); /*display bg*/
-  /* Keys */
-  --keys-bg: hsl(30, 25%, 89%); /*Button bg*/
-  --keys-color: hsl(185, 58%, 25%); /*Button color*/
-  --key-shadow: hsl(25, 99%, 27%);
 
-  --reset-background-toggle: hsl(25, 98%, 40%); /*Reset BG*/
+.theme-light {
+  --main-bg: hsl(0, 0%, 90%);
+  --toggle-bg-keypad-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 5%, 75%);
+  --keys-bg: hsl(30, 25%, 89%);
+  --keys-color: hsl(185, 58%, 25%);
+  --key-shadow: hsl(25, 99%, 27%);
+  --reset-background-toggle: hsl(25, 98%, 40%);
   --key-shadow-reset: hsl(45, 7%, 89%);
   --key-shadow-equal: hsl(35, 11%, 61%);
-  /* text */
   --display-text-color: hsl(60, 10%, 19%);
 }
-.theme-contrast {
-  --main-bg: hsl(268, 75%, 9%); /*equal, body*/
-  --toggle-bg-keypad-bg: hsl(269, 74%, 12%); /*calculator bg*/
-  --screen-bg: hsl(269, 74%, 12%); /*display bg*/
-  /* Keys */
-  --keys-bg: hsl(269, 48%, 20%); /*Button bg*/
-  --keys-color: hsl(50, 97%, 62%); /*Button color*/
-  --key-shadow: hsl(281, 89%, 26%);
 
-  --reset-background-toggle: hsl(176, 100%, 44%); /*Reset BG*/
+.theme-contrast {
+  --main-bg: hsl(268, 75%, 9%);
+  --toggle-bg-keypad-bg: hsl(269, 74%, 12%);
+  --screen-bg: hsl(269, 74%, 12%);
+  --keys-bg: hsl(269, 48%, 20%);
+  --keys-color: hsl(50, 97%, 62%);
+  --key-shadow: hsl(281, 89%, 26%);
+  --reset-background-toggle: hsl(176, 100%, 44%);
   --key-shadow-reset: hsl(176, 50%, 44%);
   --key-shadow-equal: hsl(50, 50%, 50%);
-  /* text */
   --display-text-color: hsl(50, 97%, 62%);
 }
+
 body {
   background-color: var(--main-bg);
 }
@@ -54,6 +48,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 #display-box {
   border: none;
   font-family: "Spartan", sans-serif;
@@ -92,6 +87,7 @@ body {
   box-shadow: 0 3px 1px 0px var(--key-shadow-reset);
   width: 145px;
 }
+
 #equal {
   box-shadow: 0 3px 1px 0px var(--key-shadow-equal);
   background-color: var(--keys-color);
@@ -104,6 +100,7 @@ body {
   display: inline-block;
   border: none;
 }
+
 .dropdown-content {
   display: none;
   background-color: var(--keys-bg);
@@ -129,6 +126,7 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 .dropdown:hover .dropbtn {
   border: none;
   border-radius: 5px;
@@ -144,6 +142,7 @@ body {
   border: none;
   font-size: 18px;
 }
+
 @media screen and (max-width: 640px) {
   .button {
     width: 60px;
@@ -153,6 +152,7 @@ body {
   #reset {
     width: 140px;
   }
+
   #equal {
     width: 140px;
   }
